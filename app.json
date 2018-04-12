@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/foods/foods",
+    "pages/Launch/Launch",
+    "pages/pesrsonal/pesrsonal"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/food@3x.png",
+        "selectedIconPath":"static/images/food@3x.png",
+        "text": "美食"
+      },
+      {
+        "pagePath": "pages/Launch/Launch",
+        "iconPath": "static/images/Launch@3x.png",
+        "selectedIconPath": "static/images/Launch@3x.png",
+        "text": "发起"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "static/images/person@3x.png",
+        "selectedIconPath": "static/images/person@3x.png",
+        "text": "个人"
+      }
+    ],
+    "position":"bottom"
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
