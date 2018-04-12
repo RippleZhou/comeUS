@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/foods/foods",
     "pages/Launch/Launch",
-    "pages/pesrsonal/pesrsonal"
+    "pages/person/person"
   ],
   "tabBar": {
     "list": [
