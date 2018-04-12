@@ -1,4 +1,4 @@
-<!--pages/Launch/Launch.wxml-->
+<!--pages/post/post.wxml-->
 <!-- 新建活动 -->
 <view class="add-page">
   <form bindsubmit="submitForm">
@@ -19,7 +19,7 @@
         <picker bindchange="bindTypeChange" value="{{typeIndex}}" range="{{types}}">
           <view class="value" name="types">{{types[typeIndex]}}
             <image class="arrow-r" src="/static/images/arrow-r-0.png"></image>
-          </view>
+          </view>    
         </picker>
       </view>
 
@@ -32,7 +32,7 @@
 
       <!-- 有效时间 -->
       <view class="mod t-sign-time">
-        <text class="key">有效时间</text>
+        <text class="key">截止日期</text>
         <picker mode="date" value="{{date}}" start="{{date}}" end="2020-09-01" bindchange="bindDateChange">
           <view class="value" name="endtime">{{date}}
             <image class="arrow-r" src="/static/images/arrow-r-0.png"></image>
@@ -55,6 +55,11 @@
         </view>
       </view>
     </view>
+      <!-- 聚会时间 -->
+      <view class="mod t-name">
+        <text class="key">聚会时间</text>
+        <input name="title" class="input" maxlength="100" placeholder="2018-02-03 12:00 ~13:30" value="{{title}}" />
+      </view>
 
     <!-- 活动内容 -->
     <view class="mod-a mt20">
@@ -141,3 +146,4 @@
           </view>
         </view>
       </view>
+

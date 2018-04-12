@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/foods/foods",
-    "pages/Launch/Launch",
+    "pages/post/post",
     "pages/person/person"
   ],
   "tabBar": {
@@ -14,7 +14,7 @@
         "text": "美食"
       },
       {
-        "pagePath": "pages/Launch/Launch",
+        "pagePath": "pages/post/post",
         "iconPath": "static/images/Launch@3x.png",
         "selectedIconPath": "static/images/Launch@3x.png",
         "text": "发起"

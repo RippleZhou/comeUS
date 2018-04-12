@@ -1,4 +1,4 @@
-/* pages/Launch/Launch.wxss */
+/* pages/post/post.wxss */
 @import '/style/weui.wxss';
 @import '/style/zanui.wxss';
 .select{
