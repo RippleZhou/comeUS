@@ -204,6 +204,12 @@ Page({
       }
     })
   },
+  //商家选择
+  businessChoose:function(e){
+    wx.switchTab({
+      url: '../index/index'
+    })
+  },
 
   //改变联系方式
   bindAccountChange: function (e) {

@@ -55,12 +55,66 @@
         </view>
       </view>
     </view>
+
       <!-- 聚会时间 -->
+    <view class="mod-a mt20">
       <view class="mod t-name">
         <text class="key">聚会时间</text>
         <input name="title" class="input" maxlength="100" placeholder="2018-02-03 12:00 ~13:30" value="{{title}}" />
       </view>
+    </view>
 
+      <!-- 商家选择 -->
+    <view class="mod-a">
+      <view class="mod t-business">
+        
+      </view>
+
+      <!-- 商家信息 -->
+        <view class="mod ">
+          <view class='cata-shop-item'>
+            <view class='shop-item'>
+              <view class='shop-img'>
+                <image src=""></image>
+              </view>
+              <view class='shop-info'>
+                <text class='shopname' data-click-title="标题" data-click-name="商家名称2">
+                </text>
+                <view class='area-info'>
+                  <text class='region-name'>{{region-name}}</text>
+                  <text class='avg'>￥{{avg}}/人</text> I <text class="area-info"> {{area-info}} </text>
+                  <view class="maincate-name">
+                    <text>{{maincate-name}}</text>                
+                  </view>
+                </view>
+              </view>
+          </view>
+        </view>
+      </view>
+      <!-- 套餐信息 -->      
+        <view class="mod ">
+          <text class="key">套餐信息</text>
+          <input name="peoplenum" type="number" class="input" maxlength="100" placeholder='请输入人数' value="{{peoplenum}}" />
+        </view>
+
+      <!-- 添加更多菜品 -->
+        <view class="mod ">
+          <text class="key">添加更多菜品</text>
+        </view>
+        <view class="mod ">
+          <text class="key">共计</text>
+          <text class=''> {{  }} 元</text>
+        </view>
+        <view class="mod ">
+          <text class="key">总人数</text>
+          <text class=''> {{  }}</text>
+        </view>
+        <view class="mod ">
+          <text class="key">人均支付</text>
+          <text class=''> {{  }}元</text>
+        </view>
+    </view>
+    
     <!-- 活动内容 -->
     <view class="mod-a mt20">
       <view class="mod-big my-nick">
