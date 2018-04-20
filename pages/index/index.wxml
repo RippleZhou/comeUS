@@ -1,14 +1,48 @@
 <view>
+ <import src="/pages/template/list-template/list-template.wxml" />
+  <view class="container" class="{{filterIndexStatus>0 ? 'no-scroll':''}}">
+    <!--首页banner广告模块 satrt  -->
+    <view class="banner">
+      <image class="banner-image" src="{{bannerLink.url01}}" data-link="{{bannerLink.url01}}" bindtap="bannerLink"></image>
+    </view>
+    <!--首页banner广告模块 end  -->
 
-index
-  <image src=''> 
-  
-  
-  
-  
-  
-  
-  
-  
-  </image>
+    <!--条件筛选模块start  -->
+    <view class="{{(filterIndexStatus>-1) ? 'filter-wrap' : 'filter-wrap-defalut'}}">
+      <view class="filter">
+        <view class="filter-item-wrap {{(filter[2]==='服务排序' ? 'filter-item-wrap-sort':'filter-item-wrap-defalut')}}" wx:for="{{filter}}" data-item="{{item}}" data-index="{{index}}" bindtap="filtering">
+          <view class="filter-item">
+            <text class="{{((filterIndexStatus==index)||filterInit[index]!=filter[index]) ? 'filter-item-title-color' : 'filter-item-title'}}">{{item}}</text>
+            <image wx:if="{{item==filterInit[index]&&(filterIndexStatus!=(index))}}" src="{{imgArrowUp}}" class="arrow-up"></image>
+            <image wx:elif="{{(index)==filterIndexStatus}}" src="{{imgArrowDown}}" class="arrow-down"></image>
+            <image wx:else src="{{imgArrowChecked}}" class="arrow-up"></image>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{filterIndexStatus>-1}}">
+        <view wx:for="{{options[filterIndexStatus]}}" wx:for-index="index" wx:for-item="option">
+          <view class="sort-select {{(index===(filterSelections[filterIndexStatus].index)) ? 'active' : ''}}" bindtap="selecting" data-item="{{option}}" data-index="{{index}}" data-filter-index-status="{{filterIndexStatus}}">{{option}}</view>
+        </view>
+      </view> 
+    </view>
+    <!--条件筛选模块end -->
+    <!--遮罩层模块start  -->
+    <view class="{{(filterIndexStatus>-1) ? 'mask' : ''}}" data-mask="{{filterIndexStatus>-1}}" catchtap="closeMask">
+    </view>
+    <!--遮罩层模块end  -->
+    <!--列表start  -->
+    <view class="list-wrap">
+      <block wx:for="{{garages}}" wx:for-item="garage" wx:for-index="index">
+        <!--引入list-template模板start  -->
+        <template is="garageList" data="{{garage, imageUrl}}" />
+        <!--引入list-template模板end  -->
+      </block>
+      <view class="service-wrap" wx:if="{{(filterIndexStatus>-1) ? false : true}}">
+        <button open-type="contact" session-from="weapp">
+          <image class="service-image" src="/static/images/service@2x.png"></image>
+        </button>
+      </view>
+    </view>
+    <!--列表end  -->
+  </view>
 </view>
