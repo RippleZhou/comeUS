@@ -2,10 +2,10 @@
 <view style="padding-bottom:100rpx;">
   <view class="list-banner-wrap">
     <swiper class='list-banner' bindchange="slideChange">
-      <block wx:if="{{repairFactoryInfo.photos.length > 0}}">
-        <block wx:for="{{repairFactoryInfo.photos}}" wx:for-index="index" wx:key="index">
+      <block wx:if="{{shopNameInfo.photos.length > 0}}">
+        <block wx:for="{{shopNameInfo.photos}}" wx:for-index="index" wx:key="index">
           <swiper-item class="banner-image-wrap">
-            <image class='banner-image' mode="aspectFill" src="{{imageUrl + item.url}}" data-urls="{{repairFactoryInfo.photos}}" data-url="{{item.url}}" bindtap="showImage"></image>
+            <image class='banner-image' mode="aspectFill" src="{{imageUrl + item.url}}" data-urls="{{shopNameInfo.photos}}" data-url="{{item.url}}" bindtap="showImage"></image>
           </swiper-item>
         </block>
       </block>
@@ -24,107 +24,107 @@
     </view>
   </view>
   <view class="list-box">
-    <view class='repair-box'>
-      <text class='repair-name-companyName'>{{repairFactoryInfo.companyName}}</text>
-      <view class='list-item-appraise'>
+    <view class='shop-box'>
+      <text class='shop-name-shopName'>{{shopNameInfo.shopName}}</text>
+      <!-- <view class='list-item-appraise'>
         <image src="/images/appraise@2.png" class="appraise-icon"></image>
         <image src="/images/appraise@2.png" class="appraise-icon"></image>
         <image src="/images/appraise@2.png" class="appraise-icon"></image>
         <image src="/images/appraise@2.png" class="appraise-icon"></image>
         <image src="/images/appraise@2.png" class="appraise-icon"></image>
-      </view>
+      </view> -->
       <view class="service-order">
-        <text class='repair-text'>服务车次 {{repairFactoryInfo.countService}} 单</text>
+        <text class='sell-text'>已售 {{shopNameInfo.countService}} 单</text>
       </view>
     </view>
 
-    <view class='repair-map' bindtap='openMap'>
-      <view class='repair-address-box'>
-        <text class='repair-address'>{{repairFactoryInfo.address}}</text>
-        <text wx:if="{{repairFactoryInfo.finalDistance}}" class='repair-text'>距您 {{repairFactoryInfo.finalDistance}}</text>
+    <view class='shop-map' bindtap='openMap'>
+      <view class='shop-address-box'>
+        <text class='shop-address'>{{shopNameInfo.address}}</text>
+        <text wx:if="{{shopNameInfo.finalDistance}}" class='sell-text'>距您 {{shopNameInfo.finalDistance}}</text>
       </view>
-      <view class='repair-right-map'>
-        <image src="/images/map.png" class='repair-map-icon'></image>
-        <text class="repair-map-text">地图</text>
+      <view class='shop-right-map'>
+        <image src="/images/map.png" class='shop-map-icon'></image>
+        <text class="shop-map-text">地图</text>
       </view>
     </view>
 
     <view class='shopkeeper-box'>
-      <text class='repair-name'>店长风采</text>
-      <text class='repair-text'>专业店长汽修服务</text>
-      <view class='repair-map-shop'>
-        <image wx:if="{{repairFactoryInfo.managerAvatar}}" class='portrait-icon' data-avatar="{{repairFactoryInfo.managerAvatar}}" bindtap="imageAvatar" src="{{imageUrl+repairFactoryInfo.managerAvatar}}"></image>
+      <text class='shop-name'>店长风采</text>
+      <text class='shop-text'>专业店长汽修服务</text>
+      <view class='shop-map-shop'>
+        <image wx:if="{{shopNameInfo.managerAvatar}}" class='portrait-icon' data-avatar="{{shopNameInfo.managerAvatar}}" bindtap="imageAvatar" src="{{imageUrl+shopNameInfo.managerAvatar}}"></image>
         <image wx:else class='portrait-icon' src="/images/avatar.png"></image>
         <view class='portrait-text'>
           <view class="portrait-text-identity">
-            <text class="portrait-text-identity-title">{{repairFactoryInfo.managerName}}</text>
+            <text class="portrait-text-identity-title">{{shopNameInfo.managerName}}</text>
             <image src='/images/technician.png' mode="aspectFit" class='portrait-text-identity-icon'></image>
             <text class="portrait-text-identity-auth">技师认证</text>
           </view>
           <view>
-            <text class='repair-text'>联系时间 {{repairFactoryInfo.managerContactStartTime}}{{repairFactoryInfo.managerContactStartTime? '~' : ''}}{{repairFactoryInfo.managerContactEndTime}}</text>
+            <text class='shop-text'>联系时间 {{shopNameInfo.managerContactStartTime}}{{shopNameInfo.managerContactStartTime? '~' : ''}}{{shopNameInfo.managerContactEndTime}}</text>
           </view>
         </view>
         <view class='shopkeeper-itme' bindtap='phoneCall'>
-          <image src='/images/phone.png' class='repair-right-icon'></image>
+          <image src='/images/phone.png' class='shop-right-icon'></image>
           <text class="callphone">致电</text>
         </view>
       </view>
     </view>
 
-    <view class="{{((repairFactoryInfo.brandList.length>0 || repairFactoryInfo.workYear || repairFactoryInfo.managerRemark)) ? 'list-text':'list-text-defalut'}}" wx:if="{{repairFactoryInfo.brandList || repairFactoryInfo.workYear || repairFactoryInfo.managerRemark}}">
-      <view class='introduce-text-info' wx:if="{{repairFactoryInfo.brandList.length>0}}">
+    <view class="{{((shopNameInfo.brandList.length>0 || shopNameInfo.workYear || shopNameInfo.managerRemark)) ? 'list-text':'list-text-defalut'}}" wx:if="{{shopNameInfo.brandList || shopNameInfo.workYear || shopNameInfo.managerRemark}}">
+      <view class='introduce-text-info' wx:if="{{shopNameInfo.brandList.length>0}}">
         <view class='introduce-info'>
           <text>擅长品牌</text>
-        </view>
+        </view> 
         <view class="introduce-content">
           <view>
-            <block wx:for="{{repairFactoryInfo.brandList}}" wx:for-index="index" wx:key="index">
+            <block wx:for="{{shopNameInfo.brandList}}" wx:for-index="index" wx:key="index">
               <text style="color:#363636;">{{item}}</text>
-              <text wx:if="{{!(index === (repairFactoryInfo.brandList.length-1))}}">、</text>
+              <text wx:if="{{!(index === (shopNameInfo.brandList.length-1))}}">、</text>
             </block>
           </view>
         </view>
       </view>
-      <view class='introduce-text' wx:if="{{repairFactoryInfo.workYear}}">
-        <text class='repair-color'>从业年限</text>
-        <text wx:if="{{repairFactoryInfo.workYear}}" style="color:#363636;">{{repairFactoryInfo.workYear}} 年</text>
+      <view class='introduce-text' wx:if="{{shopNameInfo.workYear}}">
+        <text class='shop-color'>从业年限</text>
+        <text wx:if="{{shopNameInfo.workYear}}" style="color:#363636;">{{shopNameInfo.workYear}} 年</text>
       </view>
-      <view class='introduce-text-info' wx:if="{{repairFactoryInfo.managerRemark}}">
+      <view class='introduce-text-info' wx:if="{{shopNameInfo.managerRemark}}">
         <view class='introduce-info'>
           <text>个人介绍</text>
         </view>
         <view class="introduce-content">
-          <text class="self-intro" style="color:#363636;">{{repairFactoryInfo.managerRemark}}</text>
+          <text class="self-intro" style="color:#363636;">{{shopNameInfo.managerRemark}}</text>
         </view>
       </view>
     </view>
-    <view wx:if="{{repairFactoryInfo.userPics.length>0}}" class="{{(repairFactoryInfo.userPics.length > 2)?'shopkeeper-box-merchant':'shopkeeper-box-merchant2'}}">
-      <text class='repair-name'>商家资质</text>
-      <text class='repair-text'>商家资质证书一览无余</text>
-      <scroll-view wx:if="{{repairFactoryInfo.userPics.length>0}}" scroll-x="{{(repairFactoryInfo.userPics.length > 2)?true:false}}" class="shopkeeper-scroll">
-        <view wx:for="{{repairFactoryInfo.userPics}}" wx:for-item="photo" class="{{(repairFactoryInfo.userPics.length > 2)?'shopkeeper-photo':'shopkeeper-photo2'}}" wx:for-index="index" wx:key="index">
-          <image class="{{(repairFactoryInfo.userPics.length > 2)?'repair-img':'repair-img2'}}" src="{{imageUrl + photo.url}}" mode="aspectFill" data-urls="{{repairFactoryInfo.userPics}}" data-url="{{photo.url}}" bindtap="showImage"></image>
+    <view wx:if="{{shopNameInfo.userPics.length>0}}" class="{{(shopNameInfo.userPics.length > 2)?'shopkeeper-box-merchant':'shopkeeper-box-merchant2'}}">
+      <text class='shop-name'>商家资质</text>
+      <text class='shop-text'>商家资质证书一览无余</text>
+      <scroll-view wx:if="{{shopNameInfo.userPics.length>0}}" scroll-x="{{(shopNameInfo.userPics.length > 2)?true:false}}" class="shopkeeper-scroll">
+        <view wx:for="{{shopNameInfo.userPics}}" wx:for-item="photo" class="{{(shopNameInfo.userPics.length > 2)?'shopkeeper-photo':'shopkeeper-photo2'}}" wx:for-index="index" wx:key="index">
+          <image class="{{(shopNameInfo.userPics.length > 2)?'shop-img':'shop-img2'}}" src="{{imageUrl + photo.url}}" mode="aspectFill" data-urls="{{shopNameInfo.userPics}}" data-url="{{photo.url}}" bindtap="showImage"></image>
         </view>
       </scroll-view>
     </view>
     <view wx:else class="shopkeeper-box">
       <view>
-        <text class='repair-name'>商家资质</text>
+        <text class='shop-name'>商家资质</text>
       </view>
       <view>
-        <text class='repair-text'>商家资质证书一览无余</text>
+        <text class='shop-text'>商家资质证书一览无余</text>
       </view>
       <view>
-        <text class="repair-text-store">该商户未上传相关照片</text>
+        <text class="shop-text-store">该商户未上传相关照片</text>
       </view>
 
     </view>
-    <view class='repair-list-table'>
-      <text class='repair-name-service'>主营服务</text>
-      <text class='repair-text'>为您提供多项服务报价</text>
+    <view class='shop-list-table'>
+      <text class='shop-name-service'>主营服务</text>
+      <text class='shop-text'>为您提供多项服务报价</text>
       <view class='list-table'>
-        <view class='list-row' wx:for="{{repairFactoryInfo.garageTaskList}}" wx:for-item="garage" wx:for-index="index" wx:if="{{index<10}}" wx:key="index">
+        <view class='list-row' wx:for="{{shopNameInfo.garageTaskList}}" wx:for-item="garage" wx:for-index="index" wx:if="{{index<10}}" wx:key="index">
           <block>
             <view class='list-td-service'>
               <image src='/images/other.png' class='list-icon'></image>

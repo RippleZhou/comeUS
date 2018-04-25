@@ -37,12 +37,8 @@
         <template is="garageList" data="{{garage, imageUrl}}" />
         <!--引入list-template模板end  -->
       </block>
-      <view class="service-wrap" wx:if="{{(filterIndexStatus>-1) ? false : true}}">
-        <button open-type="contact" session-from="weapp">
-          <image class="service-image" src="/static/images/service@2x.png"></image>
-        </button>
-      </view>
     </view>
     <!--列表end  -->
   </view>
+  
 </view>

@@ -13,14 +13,14 @@
               {{garage.companyName}}
             </text>
       <view class="list-item-appraise">
-        <view>
+        <!-- <view>
           <image class="appraise-icon" src="/images/appraise@2.png"></image>
           <image class="appraise-icon" src="/images/appraise@2.png"></image>
           <image class="appraise-icon" src="/images/appraise@2.png"></image>
           <image class="appraise-icon" src="/images/appraise@2.png"></image>
           <image class="appraise-icon" src="/images/appraise@2.pn g"></image>
         </view>
-        <view>
+        <view> -->
           <text class="list-item-distance">{{garage.finalDistance}}</text>
         </view>
       </view>
