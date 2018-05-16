@@ -1,0 +1,71 @@
+/* pages/mypost/mypost.wxss */
+@import '../../utils/flex.wxss';
+page{
+  background:#F6F5FA;
+}
+.post{
+  width:90%;
+  margin:0 auto;
+}
+.post-img{
+  position: relative;
+  height: 300rpx;
+}
+.post-img text{
+  color:#FFFFFF;
+}
+.post-pic{
+  position: absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+.my-post,.post-total,.line{
+  position: absolute;
+}
+.my-post{
+  top:20%;
+  left:40rpx;
+}
+.line{
+  top:45%;
+  left:40rpx;
+  width:30%;
+  border:.5px solid #F6F5FA;
+}
+.post-total{
+  top:50%;
+  left:40rpx;
+}
+.post-total text{
+  font-size:14px;
+}
+/*活动地址 post-address*/
+
+.address{
+  width:90%;
+  margin:20pt auto;
+  font-size:30rpx;
+  background:#F6F5FA;
+}
+.post-detail{
+  margin-top:20rpx auto;
+  border-top:1px solid blue;
+}
+.detail-left{
+  width:83pt;
+  height: 83pt;
+}
+.detail-left image{
+  width:100%;
+  height:100%;
+}
+.detail-right{
+  margin-left:8pt;
+}
+.detail-top{
+  padding:10pt 0;
+  font-size:18pt;
+}

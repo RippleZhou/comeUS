@@ -27,8 +27,8 @@
     </view>
     <!--条件筛选模块end -->
     <!--遮罩层模块start  -->
-    <view class="{{(filterIndexStatus>-1) ? 'mask' : ''}}" data-mask="{{filterIndexStatus>-1}}" catchtap="closeMask">
-    </view>
+     <view class="{{(filterIndexStatus>-1) ? 'mask' : ''}}" data-mask="{{filterIndexStatus>-1}}" catchtap="closeMask">
+    </view> 
     <!--遮罩层模块end  -->
     <!--列表start  -->
     <view class="list-wrap">

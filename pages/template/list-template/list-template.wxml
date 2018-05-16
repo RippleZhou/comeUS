@@ -1,4 +1,4 @@
-<template name="garageList">
+<template name="garageList"> 
   <view class="list-item" bindtap="listDetail" data-info="{{garage}}">
     <view class="list-item-carPic">
       <block wx:if="{{garage.photos.length > 0}}">
@@ -11,30 +11,9 @@
     <view class="list-item-main">
       <text class="list-item-title">
               {{garage.companyName}}
-            </text>
-      <view class="list-item-appraise">
-        <!-- <view>
-          <image class="appraise-icon" src="/images/appraise@2.png"></image>
-          <image class="appraise-icon" src="/images/appraise@2.png"></image>
-          <image class="appraise-icon" src="/images/appraise@2.png"></image>
-          <image class="appraise-icon" src="/images/appraise@2.png"></image>
-          <image class="appraise-icon" src="/images/appraise@2.pn g"></image>
-        </view>
-        <view> -->
-          <text class="list-item-distance">{{garage.finalDistance}}</text>
-        </view>
-      </view>
-      <view class="list-item-order">
-        <text class="list-item-order-title">服务次数</text>
-        <text class="list-item-order-content">{{garage.countService}}</text>单
-      </view>
-      <view class="list-item-items">
-        <block wx:for="{{garage.business}}" wx:for-item="item" wx:for-index="index">
-          <view class="list-item-text">
-            <view class="list-item-text-center">{{item}}</view>
-          </view>
-        </block>
-      </view>
+      </text>
+    <view class="list-item- appraise"> 
+    </view>
     </view>
   </view>
 </template>

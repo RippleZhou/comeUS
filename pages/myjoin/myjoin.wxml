@@ -1,0 +1,9 @@
+<!--pages/myjoin/myjoin.wxml-->
+<view>
+  <view class="join">
+    <view class='join-img flex flex-dir-top flex-main-center flex-cross-center'>
+          <image class="join-pic" src="{{personLink.url02}}"></image>
+    </view>
+  </view>
+</view> 
+
