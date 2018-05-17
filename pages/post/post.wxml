@@ -1,7 +1,8 @@
 <!--pages/post/post.wxml-->
 <!-- 新建活动 -->
-<view class="add-page">
+<view class="add-page" style="padding:0;color:#333333;">
   <form bindsubmit="submitForm">
+    <view class="title">填写活动信息</view>
     <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{TopTips}}</view>
     <view class="mod-a">
       <!-- 活动主题 -->
@@ -41,7 +42,7 @@
       </view>
 
       <!-- 限制人数 -->
-      <view class="mod  t-early">
+      <view class="mod t-early">
         <text class="key">限制人数</text>
         <switch type="switch" bindchange="switch1Change" name="switchHide" />
       </view>
@@ -67,7 +68,8 @@
       <!-- 商家选择 -->
     <view class="mod-a">
       <view class="mod t-business">
-        
+          <text>商家选择</text>
+          
       </view>
 
       <!-- 商家信息 -->

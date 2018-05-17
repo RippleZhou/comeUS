@@ -34,7 +34,7 @@
     <view class="list-wrap">
       <block wx:for="{{garages}}" wx:for-item="garage" wx:for-index="index">
         <!--引入list-template模板start  -->
-        <template is="garageList" data="{{garage, imageUrl}}" />
+        <template is="garageList" data="{{garage}}" />
         <!--引入list-template模板end  -->
       </block>
     </view>

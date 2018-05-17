@@ -1,9 +1,32 @@
 <!--pages/myjoin/myjoin.wxml-->
-<view>
   <view class="join">
     <view class='join-img flex flex-dir-top flex-main-center flex-cross-center'>
           <image class="join-pic" src="{{personLink.url02}}"></image>
+          <view class="my-join"><text>我的加入</text></view>
+          <view class='line'></view>
+          <view class="join-total"><text>共{{ details.length }}起</text></view>
     </view>
   </view>
-</view> 
-
+  <view class="join-address" wx:for="{{details}}">
+    <view class="join-line">
+      <view class="join-location flex flex-main-justify" data-id="{{ item.id}}">
+          <text>{{item.title}}</text><text>2018-02-02</text>
+      </view>
+      <view class='join-detail'>
+          <view class='detail flex flex-dir-left'>
+            <view class='detail-left'><image src="{{ item.url }}"></image></view>
+            <view class='detail-right flex flex-dir-top flex-main-center'>
+              <view class="detail-top"><text>大吉大利 今晚吃鸡</text></view>
+              <view class="detail-bottom flex flex-main-justify">
+                <text>李二狗simons</text>
+                <text class='joiner'>发起者</text>
+              </view>
+            </view>
+          </view>
+          <view class="state flex flex-main-justify">
+            <text>状态</text>
+            <text>{{item.state}}</text>
+          </view>
+      </view>
+    </view>
+  </view>

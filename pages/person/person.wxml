@@ -7,11 +7,11 @@
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </view>
     <view class="my-party" navigateTo="">
-      <view class='my-post' bindtap='navigatetap' data-id="{{formdata[0].id}}">
+      <view class='my-post' bindtap='MyPost' data-id="{{formdata[0].id}}">
         <text>我的发起</text>
       </view>
       <view class="line"></view>
-      <view class='my-join' bindtap='navigatetap' data-id="{{formdata[1].id}}">
+      <view class='my-join' bindtap='MyJoin' data-id="{{formdata[1].id}}">
         <text>我的加入</text>
       </view>
     </view>

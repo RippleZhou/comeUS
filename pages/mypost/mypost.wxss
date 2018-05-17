@@ -4,8 +4,8 @@ page{
   background:#F6F5FA;
 }
 .post{
-  width:90%;
-  margin:0 auto;
+  width: 90%;
+  margin:20pt auto;
 }
 .post-img{
   position: relative;
@@ -25,6 +25,7 @@ page{
 .my-post,.post-total,.line{
   position: absolute;
 }
+
 .my-post{
   top:20%;
   left:40rpx;
@@ -44,15 +45,21 @@ page{
 }
 /*活动地址 post-address*/
 
-.address{
-  width:90%;
-  margin:20pt auto;
+.post-address{
+  margin:20rpx auto;
   font-size:30rpx;
-  background:#F6F5FA;
+  background:#FFFFFF;
+}
+.post-line{
+  width:90%;
+  margin:0 auto;
 }
 .post-detail{
-  margin-top:20rpx auto;
-  border-top:1px solid blue;
+  border-top:1px solid #F6F5FA;
+}
+.state,.post-location{
+  line-height:30pt;
+  height: 30pt;
 }
 .detail-left{
   width:83pt;
@@ -63,9 +70,13 @@ page{
   height:100%;
 }
 .detail-right{
-  margin-left:8pt;
+  padding-left:20pt;
 }
 .detail-top{
   padding:10pt 0;
   font-size:18pt;
+}
+.poster{
+  background:#118ffe;
+  color:#ffffff;
 }

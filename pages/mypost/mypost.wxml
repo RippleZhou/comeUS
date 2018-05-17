@@ -4,19 +4,20 @@
           <image class="post-pic" src="{{personLink.url02}}"></image>
           <view class="my-post"><text>我的发起</text></view>
           <view class='line'></view>
-          <view class="post-total"><text>共{{  }}起</text></view>
+          <view class="post-total"><text>共{{ details.length }}起</text></view>
     </view>
   </view>
-  <view class="address" wx:for="{{details}}">
-      <view class="post-location flex flex-main-justify" data-id="{{ item.id}}">
+  <view class="post-address" wx:for="{{details}}">
+      <view class="post-line">
+        <view class="post-location flex flex-main-justify" data-id="{{ item.id}}">
           <text>{{item.title}}</text><text>2018-02-02</text>
-      </view>
-      <view class='post-detail'>
+        </view>
+        <view class='post-detail'>
           <view class='detail flex flex-dir-left'>
             <view class='detail-left'><image src="{{ item.url }}"></image></view>
             <view class='detail-right flex flex-dir-top flex-main-center'>
               <view class="detail-top"><text>大吉大利 今晚吃鸡</text></view>
-              <view class="detail-bottom">
+              <view class="detail-bottom flex flex-main-justify">
                 <text>李二狗simons</text>
                 <text class='poster'>发起者</text>
               </view>
@@ -24,8 +25,9 @@
           </view>
           <view class="state flex flex-main-justify">
             <text>状态</text>
-            <text>等待加入</text>
+            <text>{{item.state}}</text>
           </view>
-      </view>
+        </view>
+      </view> 
   </view>
 

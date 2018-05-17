@@ -6,19 +6,27 @@ Page({
    */
   data: {
     personLink: {
-      url01: '/static/images/个人背景无阴影@2x.png',
-      url02: '/static/images/个人背景无阴影@3x.png'
+      url01: '/static/images/post@2x.png',
+      url02: '/static/images/post@3x.png'
     },
     details:[
       {
         id:1,
         title:'江南小镇（砂之船奥莱店）',
-        url:'/static/images/food.png'
+        url:'/static/images/food.png',
+        state: '满员'
       },
       {
         id: 2,
         title: '金鹰',
-        url: '/static/images/food.png'
+        url: '/static/images/food.png',
+        state:'待加入'
+      },
+      {
+        id: 3,
+        title: '新街口',
+        url: '/static/images/food.png',
+        state: '关闭'
       }
     
     ]

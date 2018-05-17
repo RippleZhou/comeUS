@@ -1,4 +1,4 @@
-/* @import "/pages/template/list-template/list-template.wxss"; */
+@import "/pages/template/list-template/list-template.wxss";
 
 .no-scroll {
   position: fixed;

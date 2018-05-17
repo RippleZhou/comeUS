@@ -1,4 +1,5 @@
 // 获取应用实例
+import { Data } from './index.data.js'
 const app = getApp()
 
 Page({
@@ -25,7 +26,7 @@ Page({
     imgArrowUp: '/static/images/select1@2x.png',
     imgArrowDown: '/static/images/select2@2x.png',
     imgArrowChecked: '/static/images/select3@2x.png',
-    garages: [],/*商家*/
+    garages: Data,/*商家*/
     isEmpty: true,
     loading: false,
     pageNum: 1,

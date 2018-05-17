@@ -1,11 +1,19 @@
+
 /* pages/myjoin/myjoin.wxss */
+@import '../../utils/flex.wxss';
+ page{
+    background:#F6F5FA;
+} 
 .join{
   width:90%;
-  margin:0 auto;
+  margin:20pt auto;
 }
 .join-img{
   position: relative;
   height: 300rpx;
+}
+.join-img text{
+  color:#FFFFFF;
 }
 .join-pic{
   position: absolute; 
@@ -14,4 +22,62 @@
   top:0;
   left:0;
   z-index: -1;
+}
+.my-join,.join-total,.line{
+  position: absolute;
+}
+.my-join{
+  top:20%;
+  left:40rpx;
+}
+.line{
+  top:45%;
+  left:40rpx;
+  width:30%;
+  border:.5px solid #F6F5FA;
+}
+.join-total{
+  top:50%;
+  left:40rpx;
+}
+.join-total text{
+  font-size:14px;
+}
+/*活动地址 join-address*/
+
+.join-address{
+  margin:20rpx auto;
+  font-size:30rpx;
+  background:#FFFFFF;
+}
+.join-line{
+  width:90%;
+  margin:0 auto;
+}
+.join-detail{
+  margin-top:20rpx auto;
+  border-top:1px solid #F6F5FA;
+}
+.state,.join-location{
+  line-height:30pt;
+  height: 30pt;
+}
+.detail-left{
+  width:83pt;
+  height: 83pt;
+}
+.detail-left image{
+  width:100%;
+  height:100%;
+}
+.detail-right{
+  padding-left:20pt;
+}
+.detail-top{
+  padding:10pt 0;
+  font-size:18pt;
+}
+.joiner{
+  background:#118ffe;
+  color:#ffffff;
 }

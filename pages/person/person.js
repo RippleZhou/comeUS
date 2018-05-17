@@ -64,13 +64,19 @@ Page({
       })
     }
   },
-  navigatetap: function (e) {
+  MyPost: function (e) {
     var urlId = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '/pages/mypost/mypost?id=' + urlId
     })
-
   },
+  MyJoin: function (e) {
+    var urlId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '/pages/myjoin/myjoin?id=' + urlId
+    })
+  },
+
 
   getUserInfo: function (e) {
     console.log(e)
